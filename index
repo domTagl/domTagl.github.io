@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MAIN DOM TAGL</title>
+  </head>
+  <body>
+    <ul>
+    <li><a href="http://www.esempio1.com">DIVERSI MODI PER FARE L'OUTPUT 1</a></li>
+    <li><a href="http://www.esempio2.com">CALCOLATRICE</a></li>
+    <li><a href="http://www.esempio3.com">Esempio 3</a></li>
+    <li><a href="http://www.esempio4.com">Esempio 4</a></li>
+  </ul>
+  </body>
+</html>
