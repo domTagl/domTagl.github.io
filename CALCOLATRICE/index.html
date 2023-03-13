@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calcolatrice</title>
+  <style>
+    /* Aggiungi uno stile CSS per i pulsanti */
+    /* */
+    button {
+      width: 90px;  /* larghezza*/
+      height: 50px;/* altezza */
+      font-size: 30px;/* grandezza caratteri */
+      color: white;/*colore dei caratteri */
+      background-color: red; /*colore sfondo bottone */
+      border: 4px solid black; /* contorno dei bottoni */
+    }
+  </style>
+
+  <!--  -->
+  <!-- INPUT -->
+  <script>
+    //nel caso abbia piu' caselle INPUT passo come parametro str
+    //così prendo il contenuto di una determinata casella INPUT con nome str
+    function validateForm(str) {
+      //salvo in x la forms INPUT che si chiama barraCalcolatrice
+      let x = document.forms["INPUT"][str].value;
+      //se non x ha un valore allora
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <h1>Calcolatrice</h1>
+  <br>
+
+    <!-- INPUT nella  barraCalcolatrice-->
+    <form name="INPUT" action="/action_page.php" onsubmit="return validateForm(barraCalcolatrice)" method="post">
+      <!-- scritte prima di elemento input -->
+      RISULTATO: 
+      <input type="text" name="barraCalcolatrice">
+        <!-- value è il contenuto del bottone -->
+      <!-- <input type="submit" value="CALCOLA"> -->
+    </form>
+
+  <br>
+  <br>
+  <button onclick="prendiValorePulsante('7')">7</button>
+  <button onclick="prendiValorePulsante('8')">8</button>
+  <button onclick="prendiValorePulsante('9')">9</button>
+  <button onclick="prendiValorePulsante('/')">/</button>
+  <br>
+  <br>
+  <button onclick="prendiValorePulsante('4')">4</button>
+  <button onclick="prendiValorePulsante('5')">5</button>
+  <button onclick="prendiValorePulsante('6')">6</button>
+  <button onclick="prendiValorePulsante('*')">*</button>
+  <br>
+  <br>
+  <button onclick="prendiValorePulsante('1')">1</button>
+  <button onclick="prendiValorePulsante('2')">2</button>
+  <button onclick="prendiValorePulsante('3')">3</button>
+  <button onclick="prendiValorePulsante('-')">-</button>
+  <br>
+  <br>
+  <button onclick="prendiValorePulsante('0')">0</button>
+  <button onclick="prendiValorePulsante('.')">.</button>
+  <button onclick="calculate()">=</button>
+  <button onclick="prendiValorePulsante('+')">+</button>
+
+  <script>
+    //prende il valore del pulsante cioè value
+    //dopo aggiunge al display il valore
+    function prendiValorePulsante(value) {
+      var input = document.getElementsByName("barraCalcolatrice")[0];
+      input.value += value;
+    }
+
+    function calculate() {
+      let expression = document.getElementsByName("barraCalcolatrice")[0].value;
+      let result = eval(expression);
+      document.getElementsByName("barraCalcolatrice")[0].value = result;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
