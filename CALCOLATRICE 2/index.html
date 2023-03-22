@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClassCalcolatriceolatrice</title>
+  <style>
+    input {
+      width: 110px;  /* larghezza*/
+      height: 60px;/* altezza */
+      font-size: 30px;/* grandezza caratteri */
+      color: white;/*colore dei caratteri */
+      background-color: rgb(92, 91, 91); /*colore sfondo bottone */
+      border: 4px solid black; /* contorno dei bottoni */
+    }
+  </style>
+
+  <script src="js.js"></script>
+
+</head>
+<body>
+  <h1>Calcolatrice</h1>
+  <br>
+
+    RISULTATO:
+    <td><input type="text" id="numeroFinale"></td>
+
+  <br>
+  <br>
+  <input type="button" value = "7" onclick="ClassCalcolatrice.aggiungiNumero('7')">
+  <input type="button" value = "8"  onclick="ClassCalcolatrice.aggiungiNumero('8')"></button>
+  <input type="button" value = "9"  onclick="ClassCalcolatrice.aggiungiNumero('9')"></button>
+  <input type="button" value = "/"  onclick="ClassCalcolatrice.aggiungiSegno('/')"></button>
+  <br>
+  <br>
+  <input type="button" value = "4"  onclick="ClassCalcolatrice.aggiungiNumero('4')"></button>
+  <input type="button" value = "5"  onclick="ClassCalcolatrice.aggiungiNumero('5')"></button>
+  <input type="button" value = "6"  onclick="ClassCalcolatrice.aggiungiNumero('6')"></button>
+  <input type="button" value = "*"  onclick="ClassCalcolatrice.aggiungiSegno('*')"></button>
+  <br>
+  <br>
+  <input type="button" value = "1"  onclick="ClassCalcolatrice.aggiungiNumero('1')"></button>
+  <input type="button" value = "2"  onclick="ClassCalcolatrice.aggiungiNumero('2')"></button>
+  <input type="button" value = "3"  onclick="ClassCalcolatrice.aggiungiNumero('3')"></button>
+  <input type="button" value = "-"  onclick="ClassCalcolatrice.aggiungiSegno('-')"></button>
+  <br>
+  <br>
+  <input type="button" value = "0"  onclick="ClassCalcolatrice.aggiungiNumero('0')"></button>
+  <input type="button" value = "."  onclick="ClassCalcolatrice.aggiungiNumero('.')"></button>
+  <input type="button" value = "="  onclick="ClassCalcolatrice.calcolaRisultato()"></button>
+  <input type="button" value = "+"  onclick="ClassCalcolatrice.aggiungiSegno('+')"></button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
