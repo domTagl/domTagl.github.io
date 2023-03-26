@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClassCalcolatriceolatrice</title>
+  <style>
+    input[type="button"] {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="button"]:hover {
+      background-color: #0069d9;
+    }
+  </style>
+
+  <script src="js.js"></script>
+
+</head>
+<body>
+  <h1>Calcolatrice</h1>
+  <br>
+
+    RISULTATO:
+    <td><input type="text" id="numeroFinale"></td>
+
+  <br>
+  <br>
+  <input type="button" value = "7" onclick="ClassCalcolatrice.aggiungiNumero('7')">
+  <input type="button" value = "8"  onclick="ClassCalcolatrice.aggiungiNumero('8')"></button>
+  <input type="button" value = "9"  onclick="ClassCalcolatrice.aggiungiNumero('9')"></button>
+  <input type="button" value = "/"  onclick="ClassCalcolatrice.aggiungiSegno('/')"></button>
+  <br>
+  <br>
+  <input type="button" value = "4"  onclick="ClassCalcolatrice.aggiungiNumero('4')"></button>
+  <input type="button" value = "5"  onclick="ClassCalcolatrice.aggiungiNumero('5')"></button>
+  <input type="button" value = "6"  onclick="ClassCalcolatrice.aggiungiNumero('6')"></button>
+  <input type="button" value = "*"  onclick="ClassCalcolatrice.aggiungiSegno('*')"></button>
+  <br>
+  <br>
+  <input type="button" value = "1"  onclick="ClassCalcolatrice.aggiungiNumero('1')"></button>
+  <input type="button" value = "2"  onclick="ClassCalcolatrice.aggiungiNumero('2')"></button>
+  <input type="button" value = "3"  onclick="ClassCalcolatrice.aggiungiNumero('3')"></button>
+  <input type="button" value = "-"  onclick="ClassCalcolatrice.aggiungiSegno('-')"></button>
+  <br>
+  <br>
+  <input type="button" value = "0"  onclick="ClassCalcolatrice.aggiungiNumero('0')"></button>
+  <input type="button" value = "."  onclick="ClassCalcolatrice.aggiungiNumero('.')"></button>
+  <input type="button" value = "="  onclick="ClassCalcolatrice.calcolaRisultato()"></button>
+  <input type="button" value = "+"  onclick="ClassCalcolatrice.aggiungiSegno('+')"></button>
+  <br>
+  <br>
+  <input type="button" value = "CANC"  onclick="ClassCalcolatrice.cancella()"></button>
+  <input type="button" value = "negativo"  onclick="ClassCalcolatrice.negativo()"></button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
