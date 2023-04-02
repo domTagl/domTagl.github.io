@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/javascript">
+        const tdList = new TodoLIst(); 
+    </script>
+
+    <script>
+        window.addEventListener("load", function() {
+            var table = document.getElementById("miaTabella");
+            table.rows[2].style.display = "none"; // nasconde la seconda riga
+            table.rows[3].style.display = "none"; // nasconde la terza riga
+        });  
+    </script>
+
+</head>
+
+<body>
+    <h1> Todo List</h1>
+
+
+
+    <table id="miaTabella" style = "margin: 0 auto">
+        <tr>
+            <th>
+                <input type="text" id="lblInserisci" name="inserisci" style = "background-color: darkcyan;">
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                <input type="button" onclick="tdList.inserisci()" value="inserisci" id="btnInserisci"style = "background-color: darkcyan;">
+            </th>
+        </tr>
+        <tr>
+            <th><input type="text" id="lbl1"></th>
+            <th><label for="lbl">fatto</label><input type="checkbox" id="chk1" onclick="tdList.ControlloCheck(1)"></th>
+            <th><input type="button" onclick="tdList.cancella(1)" value="cancella" style = "background-color: darkcyan;"></th>
+        </tr>
+        <tr>
+            <th><input type="text" id="lbl2"></th>
+            <th><label for="lbl">fatto</label><input type="checkbox" id="chk2" onclick="tdList.ControlloCheck(2)"></th>
+            <th><input type="button" onclick="tdList.cancella(2)" value="cancella"style = "background-color: darkcyan;"></th>
+        </tr>
+        <tr>
+            <th><input type="text" id="lbl3"></th>
+            <th><label for="lbl">fatto</label><input type="checkbox" id="chk3" onclick="tdList.ControlloCheck(3)"></th>
+            <th><input type="button" onclick="tdList.cancella(3)" value="cancella"style = "background-color: darkcyan;"></th>
+        </tr>
+    </table>
+
+
+    
+</body>
+
+
+
+
+
+
+</html>

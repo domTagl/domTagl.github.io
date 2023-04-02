@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    color: red;
+}
+
+input{
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    background-color: red;
+}
+
+table{
+    border: 5px solid red;
+}
