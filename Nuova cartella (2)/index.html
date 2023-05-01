@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Document</title>
+  <title>Campo Minato</title>
   <!-- Importa la libreria jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Definizione dello stile CSS -->
@@ -30,8 +30,14 @@
     }
     
     /* Aggiunge la regola per mostrare il testo al clic */
-    .casella.clicked {
+    .casella.clickedDX {
       background-color: transparent;
+      color: black;
+    }
+
+    /* Aggiunge la regola per mostrare il testo al clic */
+    .casella.clickedSX {
+      background-color: red;
       color: black;
     }
   </style>
@@ -77,11 +83,15 @@
   </script>
 
   <script>
-    $(document).on("click", ".casella", function() {
-      $(this).addClass("clicked");
+    $(document).on("click", ".casella", function(event) {
       if($(this).text() == "B"){
-        alert("la bomba è stata schiacciata, hai perso"); 
+        alert("La bomba è stata schiacciata, hai perso"); 
+      } else {
+        $(this).addClass("clickedDX"); 
       }
+      /*if (event.which === 1) { // verifica che il click sia stato effettuato col tasto destro
+        $(this).addClass("clickedSX");
+      }*/
     });
   </script>
 
