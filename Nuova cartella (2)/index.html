@@ -84,16 +84,19 @@
 
   <script>
     $(document).on("click", ".casella", function(event) {
-      if($(this).text() == "B"){
-        alert("La bomba è stata schiacciata, hai perso"); 
-      } else {
         $(this).addClass("clickedDX"); 
-      }
-      /*if (event.which === 1) { // verifica che il click sia stato effettuato col tasto destro
-        $(this).addClass("clickedSX");
-      }*/
+        setTimeout(perso, 2000);
     });
   </script>
+  
+    <script>
+    function perso(){
+      while(true){
+       alert("La bomba è stata schiacciata, hai perso"); 
+      }
+    }
+  </script>
+    
 
 </head>
 <body>
