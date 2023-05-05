@@ -85,7 +85,10 @@
   <script>
     $(document).on("click", ".casella", function(event) {
         $(this).addClass("clickedDX"); 
-        setTimeout(perso, 2000);
+      if($(this).text() == "B"){
+      setTimeout(perso, 2000);
+    }
+        
     });
   </script>
   
