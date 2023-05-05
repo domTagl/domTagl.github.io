@@ -30,33 +30,48 @@
     }
     
     /* Aggiunge la regola per mostrare il testo al clic */
-    .casella.clickedDX {
+    .casella.clickedSX {
       background-color: transparent;
       color: black;
     }
 
     /* Aggiunge la regola per mostrare il testo al clic */
-    .casella.clickedSX {
-      background-color: red;
-      color: black;
+    .casella.clickedDX {
+      background-color: orange;
+      color: transparent; /* Rende il testo al suo interno non visibile */
     }
   </style>
   <!-- Definizione dello script JavaScript -->
   <script>
     function creaCampo() {
+      let difficoltà = 0;
+
+      if (document.getElementById("mode").value == "1") {
+        difficoltà = 3;
+      }
+      if (document.getElementById("mode").value == '2') {
+        difficoltà = 7;
+      }
+      if (document.getElementById("mode").value == "3") {
+        difficoltà = 10;
+      }
+
+
+
+
       var campo = $("#campo-minato"); // seleziona il div contenitore del campo
       campo.empty(); // svuota il contenitore
       var campoMatrice = []; // matrice per rappresentare il campo minato
       for (var i = 0; i < 10; i++) {
         campoMatrice[i] = []; // inizializza una riga vuota nella matrice
         for (var j = 0; j < 10; j++) {
-          campoMatrice[i][j] = 0; // inizializza a 0 il numero di mine adiacenti
+          campoMatrice[i][j] = " "; // inizializza a 0 il numero di mine adiacenti
         }
       }
       var mine = [];
-      for (var i = 0; i < 10; i++) {
-        var x = Math.floor(Math.random() * 10); // genera una coordinata x casuale
-        var y = Math.floor(Math.random() * 10); // genera una coordinata y casuale
+      for (var i = 0; i < difficoltà; i++) {
+        var x = Math.floor(Math.random() * difficoltà); // genera una coordinata x casuale
+        var y = Math.floor(Math.random() * difficoltà); // genera una coordinata y casuale
         mine.push([x, y]); // aggiungi la posizione della mina all'array delle mine
         // incrementa il contatore di tutte le celle adiacenti
         for (var a = Math.max(0, x - 1); a <= Math.min(9, x + 1); a++) {
@@ -83,29 +98,56 @@
   </script>
 
   <script>
-    $(document).on("click", ".casella", function(event) {
-        $(this).addClass("clickedDX"); 
-      if($(this).text() == "B"){
-      setTimeout(perso, 2000);
-    }
-        
-    });
+    function setMine(){
+      let input = 0;
+      if (document.getElementById("mode").value == "1") 
+        input = 3;
+      if (document.getElementById("mode").value == '2') 
+        input = 7;
+      if (document.getElementById("mode").value == "3") 
+        input = 10;
+      document.getElementById("numMine").value = input;
+      }
   </script>
+
+  <script>
+	  $(document).on("mousedown", ".casella", function(event) {
+		if($(this).text() == "B"){
+			$(this).addClass("clickedSX");
+			setTimeout(perso, 100);
+		}
+		if (event.which == 1) { // verifica che il click sia stato effettuato col tasto sinistro
+		   $(this).addClass("clickedSX");
+		}
+		if (event.which == 3) { // verifica che il click sia stato effettuato col tasto destro
+		  $(this).addClass("clickedDX");
+		}
+	  });
+	</script>
   
     <script>
     function perso(){
-      while(true){
-       alert("La bomba è stata schiacciata, hai perso"); 
-      }
+       alert("La bomba e' stata schiacciata, hai perso"); 
     }
   </script>
     
 
 </head>
 <body>
+  
+  <select id="mode" onclick="setMine()">
+    <option value="1">easy mode</option>
+    <option value="2">medium mode</option>
+    <option value="3" selected>hard mode</option>>
+  </select>
+
+  MINE: <input type="text" value="10" id="numMine" size="1">
+
   <!-- Aggiunge un bottone per creare il campo minato -->
   <input type="button" onclick="creaCampo()" value="Crea campo">
   <!-- Crea un div vuoto con id "campo-minato" dove verranno aggiunte le caselle -->
   <div id="campo-minato"></div>
+  
+
 </body>
 </html>
