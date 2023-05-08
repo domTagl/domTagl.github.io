@@ -112,16 +112,20 @@
 
   <script>
 	  $(document).on("mousedown", ".casella", function(event) {
-		if($(this).text() == "B"){
-			$(this).addClass("clickedSX");
-			setTimeout(perso, 100);
-		}
 		if (event.which == 1) { // verifica che il click sia stato effettuato col tasto sinistro
 		   $(this).addClass("clickedSX");
+       if($(this).text() == "B"){
+        $(this).addClass("clickedSX");
+        setTimeout(perso, 100);
+      }
 		}
-		if (event.which == 3) { // verifica che il click sia stato effettuato col tasto destro
-		  $(this).addClass("clickedDX");
-		}
+    if (event.which == 3) { // verifica che il click sia stato effettuato col tasto destro
+      if ($(this).hasClass("clickedDX")) {
+        $(this).removeClass("clickedDX").addClass("casella");
+      } else {
+        $(this).addClass("clickedDX");
+      }
+    }
 	  });
 	</script>
   
