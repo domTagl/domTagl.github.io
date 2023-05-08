@@ -13,6 +13,10 @@
             var table = document.getElementById("miaTabella");
             table.rows[2].style.display = "none"; // nasconde la seconda riga
             table.rows[3].style.display = "none"; // nasconde la terza riga
+            table.rows[4].style.display = "none"; // nasconde la seconda riga
+            table.rows[5].style.display = "none"; // nasconde la terza riga
+            table.rows[6].style.display = "none"; // nasconde la seconda riga
+            table.rows[7].style.display = "none"; // nasconde la terza riga
         });  
     </script>
 
@@ -25,15 +29,9 @@
 
     <table id="miaTabella" style = "margin: 0 auto">
         <tr>
-            <th>
-                <input type="text" id="lblInserisci" name="inserisci" style = "background-color: darkcyan;">
-            </th>
-            <th>
-                
-            </th>
-            <th>
-                <input type="button" onclick="tdList.inserisci()" value="inserisci" id="btnInserisci"style = "background-color: darkcyan;">
-            </th>
+            <th><input type="text" id="lblInserisci" name="inserisci" style = "background-color: darkcyan;"></th>
+            <th><label for="data">Data:</label><input type="date" id="date" style = "background-color: darkcyan;"></th>
+            <th><input type="button" onclick="tdList.inserisci()" value="inserisci" id="btnInserisci"style = "background-color: darkcyan;"></th>
         </tr>
         <tr>
             <th><input type="text" id="lbl1"></th>
@@ -50,8 +48,44 @@
             <th><label for="lbl">fatto</label><input type="checkbox" id="chk3" onclick="tdList.ControlloCheck(3)"></th>
             <th><input type="button" onclick="tdList.cancella(3)" value="cancella"style = "background-color: darkcyan;"></th>
         </tr>
+        <tr>
+            <th><input type="text" id="lbl3"></th>
+            <th><label for="lbl">fatto</label><input type="checkbox" id="chk3" onclick="tdList.ControlloCheck(3)"></th>
+            <th><input type="button" onclick="tdList.cancella(3)" value="cancella"style = "background-color: darkcyan;"></th>
+        </tr>
+        <tr>
+            <th><input type="text" id="lbl3"></th>
+            <th><label for="lbl">fatto</label><input type="checkbox" id="chk3" onclick="tdList.ControlloCheck(3)"></th>
+            <th><input type="button" onclick="tdList.cancella(3)" value="cancella"style = "background-color: darkcyan;"></th>
+        </tr>
+        </tr>
+        <tr>
+            <th><input type="text" id="lbl3"></th>
+            <th><label for="lbl">fatto</label><input type="checkbox" id="chk3" onclick="tdList.ControlloCheck(3)"></th>
+            <th><input type="button" onclick="tdList.cancella(3)" value="cancella"style = "background-color: darkcyan;"></th>
+        </tr>
+        <tr>
+            <th><input type="text" id="lbl3"></th>
+            <th><label for="lbl">fatto</label><input type="checkbox" id="chk3" onclick="tdList.ControlloCheck(3)"></th>
+            <th><input type="button" onclick="tdList.cancella(3)" value="cancella"style = "background-color: darkcyan;"></th>
+        </tr>
     </table>
 
+    <br>
+    <br>
+
+    <table id="miaTabella2" style = "margin: 0 auto">
+        <tr>
+        <th><input type="button" onclick="tdList.riordinaDate()" id="riordina"  value="riordina per alfabeto"></th>
+        </tr>
+        <tr>
+        <th><input type="button" id="modifica" onclick="tdList.modifica()" value="         modifica         "></th>
+        <th><input type="text" id="modificaTesto" value="inserire testo..."> </th>
+        <th><input type="date" id="modificaDate" style = "background-color: darkcyan;"></th>
+        <th><input type="text" id="modificaNumero"  value="numero..."> </th>
+        </tr>
+    </table>
+   
 
     
 </body>
