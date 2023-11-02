@@ -1,4 +1,0 @@
-Ufficio A;1;Piano 1;10;Alice;UA;Dipendenti: Alice SmithBob JohnsonCharlie BrownDavid DavisEve Evans
-Ufficio B;2;Piano 2;15;Bob;UB;Dipendenti: Frank FranklinGrace GrahamHelen HamiltonIvy IrwinJack Jackson
-Ufficio A;1;Piano 1;10;Alice;UA;Dipendenti: Alice SmithBob JohnsonCharlie BrownDavid DavisEve Evans
-Ufficio B;2;Piano 2;15;Bob;UB;Dipendenti: Frank FranklinGrace GrahamHelen HamiltonIvy IrwinJack Jackson
